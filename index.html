@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Трекер</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="top">
+  <h1>Трекер</h1>
+  <div class="today" id="todayLabel"></div>
+</header>
+
+<main>
+
+  <!-- 1. Привычки -->
+  <section class="card">
+    <h2>Сегодня</h2>
+
+    <ul class="habits">
+      <li class="habit">
+        <label>
+          <input type="checkbox" id="english">
+          <span class="name">Английский</span>
+          <span class="hint">вечером, 30 минут</span>
+        </label>
+      </li>
+
+      <li class="habit" id="strengthRow">
+        <label>
+          <input type="checkbox" id="strength">
+          <span class="name">Силовая</span>
+          <span class="hint" id="strengthHint">пн / ср / пт</span>
+        </label>
+      </li>
+
+      <li class="habit pomodoro">
+        <div class="name-block">
+          <span class="name">Pomodoro</span>
+          <span class="hint">сессий за день</span>
+        </div>
+        <div class="counter">
+          <button type="button" id="pomoMinus" aria-label="Минус">−</button>
+          <span class="count" id="pomoCount">0</span>
+          <button type="button" id="pomoPlus" aria-label="Плюс">+</button>
+        </div>
+      </li>
+    </ul>
+
+    <h3>История</h3>
+    <div class="history" id="history"></div>
+  </section>
+
+  <!-- 2. Вес -->
+  <section class="card">
+    <h2>Вес</h2>
+
+    <div class="weight-stats" id="weightStats"></div>
+
+    <form class="row" id="weightForm">
+      <input type="number" id="weightInput" step="0.1" min="30" max="300" placeholder="кг" required>
+      <button type="submit">Записать</button>
+    </form>
+    <div class="hint" id="weekLabel"></div>
+
+    <div class="chart-wrap">
+      <svg id="chart" viewBox="0 0 640 280" preserveAspectRatio="xMidYMid meet" role="img"></svg>
+    </div>
+
+    <div class="row start-row">
+      <label class="hint" for="startDate">Старт программы</label>
+      <input type="date" id="startDate">
+    </div>
+  </section>
+
+  <!-- 3. Kaizen -->
+  <section class="card">
+    <h2>Kaizen</h2>
+    <form id="noteForm">
+      <textarea id="noteInput" rows="3" placeholder="Что улучшил сегодня? (Ctrl+Enter — сохранить)"></textarea>
+      <button type="submit">Добавить</button>
+    </form>
+    <div class="notes" id="notes"></div>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
