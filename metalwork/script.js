@@ -30,7 +30,6 @@
     aboutText:    C.aboutText,
     "years-text": C.years,
     "years-plus": C.years ? C.years + "+" : null,
-    "region-lower": C.region ? String(C.region).toLowerCase() : null,
     title:        C.company ? C.company + " — металлоконструкции и изделия из металла на заказ" : null,
     "og-title":   C.company ? C.company + " — металлоконструкции на заказ" : null
   };
