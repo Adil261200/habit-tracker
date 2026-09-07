@@ -95,18 +95,21 @@
 
   /* -------------------------- 6. Галерея ----------------------------- */
   var galleryEl = $("#gallery");
-  if (galleryEl && Array.isArray(C.works)) {
-    galleryEl.innerHTML = C.works.map(function (w) {
-      var inner = w.img
-        ? '<img src="' + esc(w.img) + '" alt="' + esc(w.title) + '" loading="lazy">'
-        : '<span class="gallery-ph">' +
-            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">' +
-              '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.6"/>' +
-              '<path d="m4 17 5-4.5 4.5 4 3-2.5L20 17"/></svg>' +
-            '<span>Фото объекта</span><small>' + esc(w.title) + '</small>' +
-          '</span>';
-      return '<figure class="gallery-item reveal">' + inner + '</figure>';
+  var worksSection = $("#works");
+  var withPhoto = (Array.isArray(C.works) ? C.works : []).filter(function (w) { return w.img; });
+
+  if (galleryEl && withPhoto.length) {
+    galleryEl.innerHTML = withPhoto.map(function (w) {
+      return '<figure class="gallery-item reveal">' +
+               '<img src="' + esc(w.img) + '" alt="' + esc(w.title) + '" loading="lazy">' +
+             '</figure>';
     }).join("");
+  } else if (worksSection) {
+    // фотографий ещё нет — прячем раздел и пункт меню, чтобы не показывать
+    // клиенту пустые квадраты. Раздел вернётся сам, как только появится фото.
+    worksSection.hidden = true;
+    var worksLink = document.querySelector('.nav a[href="#works"]');
+    if (worksLink) worksLink.hidden = true;
   }
 
   } catch (err) {
