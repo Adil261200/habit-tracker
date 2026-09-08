@@ -101,7 +101,10 @@
   if (galleryEl && withPhoto.length) {
     galleryEl.innerHTML = withPhoto.map(function (w) {
       return '<figure class="gallery-item reveal">' +
-               '<img src="' + esc(w.img) + '" alt="' + esc(w.title) + '" loading="lazy">' +
+               '<span class="gallery-media">' +
+                 '<img src="' + esc(w.img) + '" alt="' + esc(w.title) + '" loading="lazy">' +
+               '</span>' +
+               '<figcaption>' + esc(w.title) + '</figcaption>' +
              '</figure>';
     }).join("");
   } else if (worksSection) {
