@@ -65,11 +65,14 @@ window.SITE = {
     { img: "img/lazer-stanok.jpg",           title: "Лазерная резка на ЧПУ в собственном цехе", pos: "center 22%" },
     { img: "img/fermy-montazh.jpg",          title: "Монтаж ферм на объекте" },
 
+    { img: "img/dver-reshetka.jpg",          title: "Входная металлическая дверь с декоративной решёткой", pos: "center 40%" },
     { img: "img/shumozashchitnyy-ekran.jpg", title: "Шумозащитный экран вдоль трассы" },
     { img: "img/lazer-ornament.jpg",         title: "Декоративные панели с орнаментом, лазерная резка", pos: "center 38%" },
-    { img: "img/perila-ploshchadka.jpg",     title: "Перила из нержавейки вокруг лестничного проёма" },
 
+    { img: "img/perila-ploshchadka.jpg",     title: "Перила из нержавейки вокруг лестничного проёма" },
     { img: "img/fermy-krovli.jpg",           title: "Фермы под кровлю производственного здания" },
+    { img: "img/dver-steklo.jpg",            title: "Входная дверь со стеклом, внутренняя отделка панелью", pos: "center 45%" },
+
     { img: "img/lazer-qyzylorda.jpg",        title: "Декоративная панель QYZYLORDA, лазерная резка" },
     { img: "img/karkas-angara.jpg",          title: "Металлокаркас ангара, монтаж на объекте" }
   ]
