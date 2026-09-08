@@ -166,6 +166,13 @@
       });
     }, { rootMargin: "0px 0px -8% 0px", threshold: 0.05 });
     revealEls.forEach(function (el) { io.observe(el); });
+
+    // Страховка: если через 1.5 с не проявился ни один блок, значит наблюдатель
+    // в этом браузере не сработал — показываем всё, пустой страницы быть не должно.
+    setTimeout(function () {
+      var shown = document.querySelector(".reveal.is-in");
+      if (!shown) revealEls.forEach(function (el) { el.classList.add("is-in"); });
+    }, 1500);
   }
 
   /* ------------------------- 9. Форма заявки -------------------------- */
