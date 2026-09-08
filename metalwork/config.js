@@ -61,10 +61,16 @@ window.SITE = {
   // весь раздел «Примеры работ» скрыт вместе с пунктом меню, чтобы на сайте
   // не висели пустые серые квадраты. Появится первое фото — раздел включится сам.
   works: [
-    { img: "img/perila-nerzhaveyka.jpg",      title: "Перила из нержавеющей стали на лестнице" },
-    { img: "img/fermy-krovli.jpg",            title: "Фермы под кровлю производственного здания" },
-    { img: "img/karkas-angara.jpg",           title: "Металлокаркас ангара, монтаж на объекте" },
-    { img: "img/shumozashchitnyy-ekran.jpg",  title: "Шумозащитный экран вдоль трассы" },
-    { img: "img/lazernaya-rezka-nadpis.jpg",  title: "Лазерная резка: перфорация и надпись «Қызылорда»" }
+    { img: "img/perila-nerzhaveyka.jpg",     title: "Перила из нержавеющей стали на лестнице" },
+    { img: "img/lazer-stanok.jpg",           title: "Лазерная резка на ЧПУ в собственном цехе", pos: "center 22%" },
+    { img: "img/fermy-montazh.jpg",          title: "Монтаж ферм на объекте" },
+
+    { img: "img/shumozashchitnyy-ekran.jpg", title: "Шумозащитный экран вдоль трассы" },
+    { img: "img/lazer-ornament.jpg",         title: "Декоративные панели с орнаментом, лазерная резка", pos: "center 38%" },
+    { img: "img/perila-ploshchadka.jpg",     title: "Перила из нержавейки вокруг лестничного проёма" },
+
+    { img: "img/fermy-krovli.jpg",           title: "Фермы под кровлю производственного здания" },
+    { img: "img/lazer-qyzylorda.jpg",        title: "Декоративная панель QYZYLORDA, лазерная резка" },
+    { img: "img/karkas-angara.jpg",          title: "Металлокаркас ангара, монтаж на объекте" }
   ]
 };

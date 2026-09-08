@@ -102,7 +102,8 @@
     galleryEl.innerHTML = withPhoto.map(function (w) {
       return '<figure class="gallery-item reveal">' +
                '<span class="gallery-media">' +
-                 '<img src="' + esc(w.img) + '" alt="' + esc(w.title) + '" loading="lazy">' +
+                 '<img src="' + esc(w.img) + '" alt="' + esc(w.title) + '" loading="lazy"' +
+                     (w.pos ? ' style="object-position:' + esc(w.pos) + '"' : '') + '>' +
                '</span>' +
                '<figcaption>' + esc(w.title) + '</figcaption>' +
              '</figure>';
