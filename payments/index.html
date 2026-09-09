@@ -87,6 +87,18 @@
     <div class="entries" id="entries"></div>
   </section>
 
+  <footer class="tools">
+    <div class="tools-row">
+      <button type="button" id="backup">Сохранить копию</button>
+      <label class="as-button" for="restoreFile">Восстановить из файла</label>
+      <input type="file" id="restoreFile" accept=".json,application/json" hidden>
+    </div>
+    <div class="hint">Записи лежат только в этом браузере: если почистить данные сайта или сменить телефон,
+      они пропадут. Копию стоит сохранять в конце месяца. Восстановление только добавляет недостающее —
+      то, что уже записано, не меняется.</div>
+    <div class="saved" id="toolsMsg" hidden></div>
+  </footer>
+
 </main>
 
 <script src="app.js"></script>
