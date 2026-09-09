@@ -34,7 +34,25 @@
     </div>
   </section>
 
-  <!-- 2. Добавить выплату -->
+  <!-- 2. Итоги по месяцам -->
+  <section class="card">
+    <h2>Итоги по месяцам</h2>
+
+    <div class="month-nav">
+      <button type="button" id="prevMonth" aria-label="Предыдущий месяц">‹</button>
+      <input type="month" id="month" aria-label="Месяц">
+      <button type="button" id="nextMonth" aria-label="Следующий месяц">›</button>
+    </div>
+
+    <div class="totals" id="totals"></div>
+    <div class="grand" id="grand"></div>
+
+    <h3>Записи за месяц</h3>
+    <div class="filterbar" id="filterBar" hidden></div>
+    <div class="entries" id="entries"></div>
+  </section>
+
+  <!-- 3. Добавить выплату — нужна раз в месяц, когда приходит новый работник -->
   <section class="card">
     <h2>Добавить выплату</h2>
 
@@ -67,24 +85,6 @@
       </div>
     </form>
     <div class="hint">Здесь же добавляется новый работник — после первой выплаты он появится в быстром вводе.</div>
-  </section>
-
-  <!-- 3. Итоги по месяцам -->
-  <section class="card">
-    <h2>Итоги по месяцам</h2>
-
-    <div class="month-nav">
-      <button type="button" id="prevMonth" aria-label="Предыдущий месяц">‹</button>
-      <input type="month" id="month" aria-label="Месяц">
-      <button type="button" id="nextMonth" aria-label="Следующий месяц">›</button>
-    </div>
-
-    <div class="totals" id="totals"></div>
-    <div class="grand" id="grand"></div>
-
-    <h3>Записи за месяц</h3>
-    <div class="filterbar" id="filterBar" hidden></div>
-    <div class="entries" id="entries"></div>
   </section>
 
   <footer class="tools">

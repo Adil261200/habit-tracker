@@ -111,7 +111,7 @@ function renderNames() {
   $('names').innerHTML = recent.map((w) => `<option value="${esc(w.name)}">`).join('');
 }
 
-/* ---------- 1. быстрый ввод за день ---------- */
+/* ---------- быстрый ввод за день ---------- */
 let showAllWorkers = false;
 const editing = new Set(); // id записей, которые правим прямо в списке
 
@@ -335,7 +335,7 @@ $('qSave').addEventListener('click', () => {
   bar._timer = setTimeout(updateQuickBar, 1800);
 });
 
-/* ---------- 2. добавить выплату ---------- */
+/* ---------- добавить выплату ---------- */
 $('payForm').addEventListener('submit', (e) => {
   e.preventDefault();
 
@@ -362,7 +362,7 @@ $('payForm').addEventListener('submit', (e) => {
   $('name').focus();
 });
 
-/* ---------- 3. итоги по месяцам ---------- */
+/* ---------- итоги по месяцам ---------- */
 let filterKey = null;          // показывать записи только этого работника
 const expanded = new Set();    // раскрытые дни
 
