@@ -16,7 +16,25 @@
 
 <main>
 
-  <!-- 1. Добавить выплату -->
+  <!-- 1. Быстрый ввод за день -->
+  <section class="card">
+    <h2>Быстрый ввод за день</h2>
+
+    <div class="field">
+      <label for="qDate">Дата</label>
+      <input type="date" id="qDate">
+    </div>
+
+    <div class="qlist" id="qList"></div>
+    <button type="button" class="more" id="qMore" hidden></button>
+
+    <div class="qbar">
+      <button type="button" id="qSave" disabled>Записать</button>
+      <span class="qsum" id="qSum">Впиши суммы тем, кто работал</span>
+    </div>
+  </section>
+
+  <!-- 2. Добавить выплату -->
   <section class="card">
     <h2>Добавить выплату</h2>
 
@@ -48,9 +66,10 @@
         <span class="saved" id="saved" hidden>Записано</span>
       </div>
     </form>
+    <div class="hint">Здесь же добавляется новый работник — после первой выплаты он появится в быстром вводе.</div>
   </section>
 
-  <!-- 2. Итоги по месяцам -->
+  <!-- 3. Итоги по месяцам -->
   <section class="card">
     <h2>Итоги по месяцам</h2>
 
@@ -64,6 +83,7 @@
     <div class="grand" id="grand"></div>
 
     <h3>Записи за месяц</h3>
+    <div class="filterbar" id="filterBar" hidden></div>
     <div class="entries" id="entries"></div>
   </section>
 
